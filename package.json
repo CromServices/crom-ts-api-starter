@@ -1,0 +1,36 @@
+{
+  "name": "crom-ts-api-starter",
+  "version": "1.0.0",
+  "description": "Crom Services TypeScript API starter (template)",
+  "private": true,
+  "type": "module",
+  "starter": {
+    "config": {
+      "name": "crom-ts-api-starter",
+      "description": "Express + TypeScript API starter: /health, request validation, a Store<T> interface, tests, Docker and Fly config.",
+      "liveUrl": "",
+      "source": "CromServices/crom-ts-api-starter",
+      "ref": "main"
+    }
+  },
+  "scripts": {
+    "dev": "node --import tsx --watch src/server.ts",
+    "start": "node dist/server.js",
+    "build": "tsc -p tsconfig.build.json",
+    "check": "tsc --noEmit",
+    "test": "node --import tsx --test test/*.test.ts"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^22.20.5",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.3"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  }
+}
