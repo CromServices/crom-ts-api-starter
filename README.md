@@ -14,7 +14,7 @@ Express + TypeScript API starter: `/health`, request validation, a `Store<T>` in
 A small, strict TypeScript API built on Express, ready to copy for a new job.
 
 - `GET /health` returns `{"status":"ok"}`.
-- `GET /` serves a minimal HTML page (unstyled; picks up the shared theme when it is live).
+- `GET /` serves a minimal HTML page on the shared Crom theme (crom-shared `theme.css` pinned at `v1.0.0`) with the standard Crom footer and credit.
 - `GET|POST /items`, `GET|DELETE /items/:id`: an **example** resource that shows request validation and the store wired together. Rename or delete it.
 - `src/lib/validate.ts`: a tiny validation helper (`requireString`, `isPlainObject`) and a `validateBody()` middleware that replies `400 {"error": ...}`.
 - `src/store/store.ts`: the `Store<T>` interface. `src/store/memory.ts`: the in-memory implementation. Swap in a database adapter without touching the routes.
@@ -65,7 +65,11 @@ npm run dev        # http://localhost:3000/health
 
 ## Footer
 
-<!-- CROM THEME SLOT: replace with crom-shared README.template.md footer when live -->
-Built by [Crom Services, Australia](https://cromservices.com.au)
+---
 
-MIT licence, see [LICENSE](LICENSE).
+Crom Services · Australia · cromservices@gmail.com
+Site: https://cromservices.com.au · Packs: https://cromservices.github.io/job-page-sample/packs/
+
+<a href="https://cromservices.com.au"><picture><source media="(prefers-color-scheme: dark)" srcset="https://cromservices.com.au/brand/credit/crom-credit-lockup-dark@2x.png"><img src="https://cromservices.com.au/brand/credit/crom-credit-lockup-light@2x.png" width="175" height="20" alt="Built by Crom Services"></picture></a>
+
+MIT, see LICENSE.
